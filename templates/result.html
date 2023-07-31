@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Interpreter - Result</title>
+</head>
+<body>
+    <h1>Math Interpreter - Result</h1>
+
+    <p>Expression: {{ expression }}</p>
+    <p>Result: {{ result }}</p>
+    <p>Inorder Traversal: {{ traversal }}</p>
+
+    {{ graph_svg|safe }}
+
+    <a href="{{ url_for('index') }}">Back to Input</a>
+</body>
+</html>
