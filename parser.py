@@ -56,7 +56,7 @@ class Parser:
         token_type, token_value = self.tokens[self.index]
         if token_type == 'NEG':
             self.index += 1
-            return Node(token_type, down=self.factor())
+            return Node(token_type, down=self.parse())
         elif token_type in ['SIN', 'COS', 'TAN']:
             self.index += 1
             return Node(token_type, down=self.factor())
