@@ -2,7 +2,6 @@ import math
 
 
 class Evaluator:
-
     def __init__(self, root):
         self.root = root
         self.ans = self.eval(root)
@@ -12,25 +11,25 @@ class Evaluator:
     def eval(self, node):
         if not node:
             return None
-        if node.type == 'NUM':
+        if node.type == "NUM":
             return node.value
-        elif node.type == 'NEG':
+        elif node.type == "NEG":
             return -1 * self.eval(node.down)
-        elif node.type == 'SIN':
+        elif node.type == "SIN":
             return math.sin(self.eval(node.down))
-        elif node.type == 'COS':
+        elif node.type == "COS":
             return math.cos(self.eval(node.down))
-        elif node.type == 'TAN':
+        elif node.type == "TAN":
             return math.tan(self.eval(node.down))
-        elif node.type == 'EXP':
+        elif node.type == "EXP":
             return self.eval(node.left) ** self.eval(node.right)
-        elif node.type == 'MUL':
+        elif node.type == "MUL":
             return self.eval(node.left) * self.eval(node.right)
-        elif node.type == 'DIV':
+        elif node.type == "DIV":
             return self.eval(node.left) / self.eval(node.right)
-        elif node.type == 'ADD':
+        elif node.type == "ADD":
             return self.eval(node.left) + self.eval(node.right)
-        elif node.type == 'SUB':
+        elif node.type == "SUB":
             return self.eval(node.left) - self.eval(node.right)
 
     def inorder(self, node):

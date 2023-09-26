@@ -2,7 +2,6 @@ from graphviz import Digraph
 
 
 class Node:
-
     def __init__(self, type, value=None, left=None, down=None, right=None):
         self.type = type
         self.value = value
@@ -18,10 +17,10 @@ class Node:
             visited = set()
 
         if self.value:
-            node_id = f'{id(self)}_{self.value}'
+            node_id = f"{id(self)}_{self.value}"
             node_label = str(self.value)
         else:
-            node_id = f'{id(self)}_{self.type}'
+            node_id = f"{id(self)}_{self.type}"
             node_label = self.type
 
         if node_id not in visited:
@@ -32,12 +31,12 @@ class Node:
                 graph.edge(parent_node, node_id, label=edge_label)
 
             if self.left:
-                self.left.to_graphviz(graph, node_id, 'left', visited)
+                self.left.to_graphviz(graph, node_id, "left", visited)
 
             if self.down:
-                self.down.to_graphviz(graph, node_id, 'down', visited)
+                self.down.to_graphviz(graph, node_id, "down", visited)
 
             if self.right:
-                self.right.to_graphviz(graph, node_id, 'right', visited)
+                self.right.to_graphviz(graph, node_id, "right", visited)
 
         return graph
