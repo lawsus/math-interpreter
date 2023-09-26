@@ -48,8 +48,4 @@ The application should now be running on a local server.
 
 ## Contribution:
 
-Pull requests are welcome. Please open an issue first if you wish to make significant changes or discuss potential improvements.
-
-## License:
-
-This project is licensed under the MIT License.
+Pull requests are welcome.
