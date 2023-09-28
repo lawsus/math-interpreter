@@ -48,4 +48,4 @@ The application should now be running on a local server.
 
 ## Contribution:
 
-Pull requests are welcome.
+Contributions are welcome.
